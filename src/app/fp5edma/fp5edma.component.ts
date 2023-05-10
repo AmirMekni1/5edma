@@ -9,9 +9,17 @@ import { ServicesService } from '../services.service';
 })
 export class FP5edmaComponent {
 
-
+  ISuser: boolean = false;
   constructor(private myservice:ServicesService){ 
- 
+    this.myservice.user.subscribe(user => {
+      if (user) {
+        this.ISuser = true
+        console.log(this.ISuser)
+      } else {
+        this.ISuser = false
+        console.log(this.ISuser)
+      }
+    })
    }
    f(){
     this.myservice.Logout()

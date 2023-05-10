@@ -30,6 +30,7 @@
               "src/styles.css"
             ],
             "scripts": [
+              "src/app/fp5edma/monscript.js"
             ]
           },
           "configurations": {

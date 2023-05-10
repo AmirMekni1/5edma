@@ -13,18 +13,18 @@
   <div class="container">
     <div class="forms-container">
       <div class="signin-signup">
-        <form action="#" class="sign-in-form" #SignIn="ngForm" (ngSubmit)="connexion(SignIn.value)">
+        <form action="#" class="sign-in-form" #SignIn="ngForm" (ngSubmit)="sign_in(SignIn.value)">
           <h2 class="title">Sign in</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Username" name="Username" #Username="ngModel" ngModel/>
+            <input type="text" placeholder="Email" name="Email" #Email="ngModel" ngModel/>
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
             <input type="password" placeholder="Password" name="Password" #Password="ngModel" ngModel/>
           </div>
           <a routerLink="/loading">bonjour</a>
-          <input type="submit" value="Login" class="btn solid" (click)="loadingPage()" *ngIf="!ISuser"/>
+          <input type="submit" value="Login" class="btn solid" (click)="loadingPage()" *ngIf="ISuser"/>
           <p class="social-text">Or Sign in with social platforms</p>
           <div class="social-media">
             <a href="#" class="social-icon">
@@ -41,25 +41,25 @@
             </a>
           </div>
         </form>
-        <form action="#" class="sign-up-form" >
+        <form action="#" class="sign-up-form" #SignUp="ngForm" (ngSubmit)="sign_up(SignUp.value)">
           <h2 class="title">Sign up</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Username" />
+            <input type="text" placeholder="Username" name="Username" #Username="ngModel" ngModel/>
           </div>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Numero de telephone" />
+            <input type="text" placeholder="Numero de telephone" name="Numero" #Numero="ngModel" ngModel/>
           </div>
           <div class="input-field">
             <i class="fas fa-envelope"></i>
-            <input type="email" placeholder="Email" />
+            <input type="email" placeholder="Email" name="Email" #Email="ngModel" ngModel/>
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Password" name="Password" #Password="ngModel" ngModel/>
           </div>
-          <input type="submit" class="btn" value="Sign up" />
+          <input type="submit" class="btn" value="Sign up"   />
           <p class="social-text">Or Sign up with social platforms</p>
           <div class="social-media">
             <a href="#" class="social-icon">
