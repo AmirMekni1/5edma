@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ServicesService } from 'src/app/services.service';
+import { ServicesService } from '../services.service';
 import { NgxSpinnerService } from 'ngx-spinner';
+
 @Component({
-  selector: 'app-ajouter',
-  templateUrl: './ajouter.component.html',
-  styleUrls: ['./ajouter.component.css']
+  selector: 'app-demande',
+  templateUrl: './demande.component.html',
+  styleUrls: ['./demande.component.css']
 })
-export class AjouterComponent implements OnInit {
+export class DemandeComponent implements OnInit {
   ISuser: boolean = false;
 name:any;
-em:any
-  constructor(private MyService: ServicesService, private router: Router,private spinner:NgxSpinnerService) {
+
+  constructor(private MyService: ServicesService, private router: Router,private spinner: NgxSpinnerService) {
     this.MyService.user.subscribe(user => {
       if (user) {
         this.ISuser = true
@@ -21,7 +22,7 @@ em:any
         console.log(this.ISuser)
       }
     })
-    this.em =this.MyService.id
+    
   }ngOnInit(): void {
   
   }
@@ -40,10 +41,4 @@ em:any
   SignOut(){
     this.MyService.Logout();
   }
-  
-  InsertOffre(form:{codeOffre:string,Username:string,Numero:number,Email: string,TitreOffre:string,Description:string,Image:string}){
-    this.MyService.AddOffre(form)
-  }
-  
-  
 }

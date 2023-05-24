@@ -11,33 +11,46 @@ import { ServicesService } from '../services.service';
 export class AuthComponent  implements OnInit {
 
   ISuser: boolean = false;
+  name: any;
 
   constructor(private route: Router,private spinner: NgxSpinnerService,private MyService:ServicesService) { 
-
     this.MyService.user.subscribe(user => {
       if (user) {
         this.ISuser = true
-        console.log(this.ISuser)
+        this.MyService.setvalue(user.uid)
       } else {
         this.ISuser = false
         console.log(this.ISuser)
       }
     })
-   }
+  }   
 
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   ngOnInit(): void {
     
-  }
+   }
+    
+  
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+
+
+
+
+
+
+
+
+
+
+
   sign_in_btn: any
   sign_up_btn: any
-  container: any
+  containers: any
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -45,14 +58,14 @@ export class AuthComponent  implements OnInit {
 
     this.sign_in_btn = document.querySelector("#sign-in-btn");
     this.sign_up_btn = document.querySelector("#sign-up-btn");
-    this.container = document.querySelector(".container");
+    this.containers = document.querySelector(".containers");
 
     this.sign_up_btn.addEventListener("click", () => {
-      this.container.classList.add("sign-up-mode");
+      this.containers.classList.add("sign-up-mode");
     });
 
     this.sign_in_btn.addEventListener("click", () => {
-      this.container.classList.remove("sign-up-mode");
+      this.containers.classList.remove("sign-up-mode");
     });
 
   }
@@ -66,25 +79,36 @@ export class AuthComponent  implements OnInit {
     setTimeout(() => {
       /** spinner ends after 5 seconds */
       this.spinner.hide();
-    }, 5000);
+    }, 3000);
 
   }
 
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   sign_in(log: { Email: string, Password: string }) {
-    console.log(log.Email)
     this.MyService.signIn(log.Email, log.Password)
   }
 
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   sign_up(form:{Username:string,Numero:number,Email:string,Password:string}){
-   // this.MyService.SignUp(login.Email,login.Password);
+   this.MyService.SignUp(form.Email,form.Password);
    this.MyService.addClient(form);
   }
 
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  SignInWithGoogle(){
+    this.MyService.GoogleSignIn()
+  }
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
+  SignInWithFacebook(){
+    this.MyService.FacebookSignIn()
+  }
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
 
   

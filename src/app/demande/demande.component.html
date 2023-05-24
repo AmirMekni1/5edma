@@ -9,7 +9,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" routerLink="/PageDacueil">Home</a>
+              <a class="nav-link active" aria-current="page" routerLink="/PageDaccueil">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" routerLink="/Demande">Demande</a>
@@ -39,6 +39,8 @@
         </div>
       </div>
     </nav>
+  
+  
     <div class="inner-header flex">
       <svg version="1.1" class="logo" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" xml:space="preserve">
@@ -94,43 +96,6 @@
           <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
         </g>
       </svg>
-      </div>
+    </div>
   </div>
-  <div *ngIf="ISuser">
-  <form action="#" class="sign-up-form" #offreA="ngForm" (ngSubmit)="InsertOffre(offreA.value)">
-    <div class="input-field">
-      <i class="fas fa-user"></i>
-      <input type="text" placeholder="codeOffre" name="codeOffre" #codeOffre="ngModel" ngModel />
-    </div>
-    <div class="input-field">
-      <i class="fas fa-user"></i>
-      <input type="text" placeholder="Username" name="Username" #Username="ngModel" ngModel />
-    </div>
-    <div class="input-field">
-      <i class="fas fa-user"></i>
-      <input type="text" placeholder="Numero de telephone" name="Numero" #Numero="ngModel" ngModel />
-    </div>
-    <div class="input-field">
-      <i class="fas fa-envelope"></i>
-      <input type="email" placeholder="Email" name="Email" #Email="ngModel" ngModel />
-    </div>
-    
-    <div class="input-field">
-      <i class="fas fa-user"></i>
-      <input type="text" placeholder="TitreOffre" name="TitreOffre" #TitreOffre="ngModel" ngModel />
-    </div>
-
-    <div class="input-field">
-      <i class="fas fa-user"></i>
-      <input type="text" placeholder="Description" name="Description" #Description="ngModel" ngModel />
-    </div>
   
-    <div class="input-field">
-      <i class="fas fa-user"></i>
-      <input type="text" placeholder="Image" name="Image" #Image="ngModel" ngModel />
-    </div>
-    <input type="submit" class="btn" value="Ajouter"  />
-     
-    
-  </form>
-</div>

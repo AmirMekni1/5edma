@@ -31,19 +31,15 @@ p {
   vertical-align: middle;
 }
 
-form{
-    width: 500px;
-    
-}
 .inner-header {
-  height:75vh;
+  height:55vh;
   width:100%;
   margin: 0;
   padding: 0;
 }
 
 .flex { /*Flexbox for containers*/
- display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -107,4 +103,5 @@ form{
     font-size:24px;
   }
   
+ 
 }

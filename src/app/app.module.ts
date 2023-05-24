@@ -33,8 +33,16 @@ import { FP5edmaComponent } from './fp5edma/fp5edma.component';
 import { AjouterComponent } from './CRUD  Services/ajouter/ajouter.component';
 import { SupprimerComponent } from './CRUD  Services/supprimer/supprimer.component';
 import { ModifierComponent } from './CRUD  Services/modifier/modifier.component';
+import { AccueilComponent } from './accueil/accueil.component';
+import { DemandeComponent } from './demande/demande.component';
+import { OffreComponent } from './offre/offre.component';
+import { ParametreComponent } from './parametre/parametre.component';
 
-//______________________________________Ngx-Spinner-End_______________________________________________
+//______________________Angular-Component________________Ngx-Spinner-End__________________________________________________
+
+
+
+//______________________________________Ngx-Spinner-End__________________________________________________
 
 @NgModule({
   declarations: [
@@ -44,6 +52,10 @@ import { ModifierComponent } from './CRUD  Services/modifier/modifier.component'
     AjouterComponent,
     SupprimerComponent,
     ModifierComponent,
+    AccueilComponent,
+    DemandeComponent,
+    OffreComponent,
+    ParametreComponent,
   ],
   imports: [
     BrowserModule,
