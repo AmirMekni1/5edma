@@ -31,7 +31,6 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgxSpinnerModule } from "ngx-spinner";
 import { FP5edmaComponent } from './fp5edma/fp5edma.component';
 import { AjouterComponent } from './CRUD  Services/ajouter/ajouter.component';
-import { SupprimerComponent } from './CRUD  Services/supprimer/supprimer.component';
 import { ModifierComponent } from './CRUD  Services/modifier/modifier.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { DemandeComponent } from './demande/demande.component';
@@ -50,7 +49,6 @@ import { ParametreComponent } from './parametre/parametre.component';
     AuthComponent,
     FP5edmaComponent,
     AjouterComponent,
-    SupprimerComponent,
     ModifierComponent,
     AccueilComponent,
     DemandeComponent,

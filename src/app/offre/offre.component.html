@@ -74,55 +74,31 @@
   </div>
   <div *ngIf="ISuser">
     <h1>Mes Offres</h1>
+    <button type="submit" value="Ajouter" class="btn btn-primary" routerLink="/Ajouter">Ajouter</button>
 
-    <!------------------------------création d'une carte------------------------------------------------------------------------>
-    <div class="wrapper" *ngFor="let elm of ArrayOffres">
-      <h1>Parallax Flipping Cards</h1>
-      <div class="cols">
-          <div class="col" ontouchstart="this.classList.toggle('hover');">
-            <div class="container">
-              <div >
-                <div class="inner">
-                  <p>{{elm.Username}}</p>
-                  <span>{{elm.Email}}</span>
-                </div>
-               
 
-              </div>
-              <div class="back">
-                <div class="inner">
-                  <p>{{elm.Description}}</p>
-                </div>
-              </div>
+    <!------------------------------création d'une carte----------------------------------------------------------------------->
+
+
+   
+    <section class="cards-wrapper">
+      <div class="card-grid-space" *ngFor="let elm of ArrayOffres">
+        <div class="num"></div>
+        <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/"
+          style="--bg-img: url({{elm.Image}})">
+          <div>
+            <h1>{{elm.Titre}}</h1>
+            <p>{{elm.Description}}</p>
+            <div class="date">6 Oct 2017</div>
+            <div class="tags">
+              <div class="tag">{{elm.Username}}</div>
             </div>
           </div>
-         
-
-        
-    <h1 class="h2 text-center text-light bg-dark pt-2 pb-3 mb-0">Bootstrap responsive card-deck</h1>
-    <div class="container" *ngFor="let elm of ArrayOffres">
-      <header>
-        <div class="jumbotron py-4 rounded-0">
-          <p class="lead">This is a good solution for SCSS users to build real responsive card-deck with Bootstrap 4.
-          </p>
-        </div>
-      </header>
-      <div class="card-deck">
-        <div class="card my-3">
-          <img class="card-img-top" src="{{elm.Image}}" >
-          <div class="card-body">
-            <h4 class="card-title">{{elm.Username}}</h4>
-            <p class="card-text">{{elm.Description}}</p>
-            <button class="btn btn-primary" type="button">Button</button>
-            <button type="submit" value="Ajouter" class="btn btn-primary" routerLink="/Ajouter">Ajouter</button>
-            <button type="button" value="Supprimer" class="btn btn-primary" (click)="DeleteOffre(elm.codeOffre)">Supprimer</button>
-            <button type="button" value="Modifier" class="btn btn-primary" (click)="getIndice(elm.codeOffre)" routerLink="/Modifier">Modifier</button>
-          </div>
-        </div>
+        </a>
       </div>
-    </div>
-  
-    
+    </section>
+
+
+
 
   </div>
-</div>

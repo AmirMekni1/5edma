@@ -57,6 +57,7 @@ export class ParametreComponent implements OnInit {
  
 
   SetClient() {
+    console.log(this.MyService.id)
     this.MyService.getuser(this.MyService.id).then(data => {
      this. ArrayClient.Email=data.get('Email')
      this. ArrayClient.Numero=data.get('Numero')

@@ -7,7 +7,6 @@ import { OffreComponent } from './offre/offre.component';
 import { DemandeComponent } from './demande/demande.component';
 import { AjouterComponent } from './CRUD  Services/ajouter/ajouter.component';
 import { ModifierComponent } from './CRUD  Services/modifier/modifier.component';
-import { SupprimerComponent } from './CRUD  Services/supprimer/supprimer.component';
 import { ParametreComponent } from './parametre/parametre.component';
 
 const routes: Routes = [
@@ -18,7 +17,6 @@ const routes: Routes = [
   {path:"Demande", component:DemandeComponent},
   {path:"Ajouter", component:AjouterComponent},
   {path:"Modifier", component:ModifierComponent},
-  {path:"Supprimer", component:SupprimerComponent},
   {path:"Reglage", component:ParametreComponent}
 ];
 
