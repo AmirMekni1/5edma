@@ -2,8 +2,9 @@
   <div class="header">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" >5edma</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand">5edma</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -15,13 +16,16 @@
               <a class="nav-link" routerLink="/Demande">Demande</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" routerLink="/Offre" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" routerLink="/Offre" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
                 Offre
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Action</a></li>
                 <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
                 <li><a class="dropdown-item" href="#">Something else here</a></li>
               </ul>
             </li>
@@ -29,7 +33,7 @@
               <a class="nav-link" routerLink="/Reglage">Reglage</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " routerLink="/" (click)="SignOut()">Déconnexio</a>
+              <a class="nav-link " routerLink="/" (click)="SignOut()">Déconnexion</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -39,8 +43,6 @@
         </div>
       </div>
     </nav>
-  
-  
     <div class="inner-header flex">
       <svg version="1.1" class="logo" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" xml:space="preserve">
@@ -55,34 +57,6 @@
       <h1>Welcome To 5edma {{name}}</h1>
     </div>
     <br>
-  
-  <!--
-    <div class="">
-      <table class="uk-table uk-table-hover uk-table-divider">
-        <thead>
-          <th scope="col">Username</th>
-          <th scope="col">Numero</th>
-          <th scope="col">Email</th>
-          <th scope="col">Password</th>
-        </thead>
-        <tbody>
-          <tr *ngFor="let elm of ArrayStudent">
-            <td>{{elm.Username}}</td>
-            <td>{{elm.Numero}}</td>
-            <td>{{elm.Email}}</td>
-            <td>{{elm.Password}}</td>
-            <td><button type="button" class="btn btn-outline-success">UPDATE</button></td>
-            <td><button type="button" class="btn btn-light"><img
-                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAABnUlEQVR4nO3XO0vDUBgG4A+Hog5O/oYWXDtU9ISUWhAnJwcLYicr1IYiuLvYwamTY/+CS0UHHRx0cXJyEAVBqTp2MTlt8kp6weamxuQELPngXXI7DydfkhOiuMa5wCgNRmsuSUcLWaQVMPqARHCJBolWwx1wV56FIl+gIj9YUmYtlDIGShl8EwNl9uo4tyKfm9f1j1HkbShZhJ6dbMk/piJXhWAqctU3ZliQiHv0ht9wClqIMR6FeGb+68wYhRT0/XXXQc3t5v5IMEYhiU7rCVzToB9uWSEHm+CqCv72DGNjTjym22yAc96PqkKvFfuQWrEPGewzjxN/m3IJdC6Pv0Cahu5JwwLpXJ8AS5MRvfRyNtBIPCCC38C5BPjdjRVyf+sFEYvRh806OjMuTS0co9sh7y+/AYWP0W2QXo8szzia2gUkAFNXeoM5mtXW1PrRXkS3qa6gc9V0NusA5AIR/DTJE/C1PV5cSWK/2u0/LBfc0g6OYXQWEuY0OGaBUmD0GAhins8oGRhjFtI0DUZ5j3/rn5LHPE31LhTXONQnS44gc73xXvsAAAAASUVORK5CYII="></button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>  
-    -->
-  
-  
-  
     <div>
       <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
         viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
@@ -90,7 +64,7 @@
           <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
         </defs>
         <g class="parallax">
-          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
           <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
           <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
           <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
@@ -99,21 +73,24 @@
     </div>
   </div>
   <div *ngIf="ISuser">
-  <section class="cards-wrapper">
-    <div class="card-grid-space" *ngFor="let elm of ArrayOffres">
-      <div class="num"></div>
-      <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/"
-        style="--bg-img: url({{elm.Image}})">
-        <div>
-          <h1>{{elm.Titre}}</h1>
-          <p>{{elm.Description}}</p>
-          <div class="date">6 Oct 2017</div>
-          <div class="tags">
-            <div class="tag">{{elm.Username}}</div>
+    <h1>Mes Offres</h1>
+    <button type="submit" value="Ajouter" class="btn btn-primary" routerLink="/Ajouter">Ajouter</button>
+
+
+    <!------------------------------création d'une carte------------------------------------------------------------------------>
+    <section class="cards-wrapper">
+      <div class="card-grid-space" *ngFor="let elm of ArrayDemandeTous">
+        <div class="num"></div>
+        <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/" style="--bg-img: url({{elm.Image}})">
+          <div>
+            <h1>{{elm.Titre}}</h1>
+            <p>{{elm.Description}}</p>
+            <div class="date">{{elm.dateoffre | date}}</div>
+            <div class="tags">
+              <div class="tag">{{elm.Username}}</div>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
+    </section>
     </div>
-  </section>
-</div>
-  

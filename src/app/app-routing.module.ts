@@ -8,6 +8,7 @@ import { DemandeComponent } from './demande/demande.component';
 import { AjouterComponent } from './CRUD  Services/ajouter/ajouter.component';
 import { ModifierComponent } from './CRUD  Services/modifier/modifier.component';
 import { ParametreComponent } from './parametre/parametre.component';
+import { CommandeComponent } from './commande/commande.component';
 
 const routes: Routes = [
   {path:"", component:AuthComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path:"Demande", component:DemandeComponent},
   {path:"Ajouter", component:AjouterComponent},
   {path:"Modifier", component:ModifierComponent},
-  {path:"Reglage", component:ParametreComponent}
+  {path:"Reglage", component:ParametreComponent},
+  {path:"MesCommandes", component:CommandeComponent}
 ];
 
 @NgModule({

@@ -15,13 +15,13 @@ export class AccueilComponent implements OnInit {
 
   public ArrayStudent: any = [];
   ISuser: boolean = false;
-  name:any;
+ 
 
   constructor(private MyService: ServicesService, private router: Router,private spinner: NgxSpinnerService,private signInCompte: AngularFireAuth) {
     console.log( this.signInCompte.getRedirectResult)
     this.MyService.user.subscribe(user => {
       if (user) {
-       this.name=user.displayName
+     
         this.ISuser = true
         console.log(user)
         
@@ -35,7 +35,7 @@ export class AccueilComponent implements OnInit {
     
   } 
 
-  ngOnInit(): void { }
+  ngOnInit(): void {this.getusername(); }
 
 
   loadingPage() {
@@ -50,5 +50,14 @@ export class AccueilComponent implements OnInit {
   }
   SignOut(){
     this.MyService.Logout();
+    this.MyService.id="";
+  }
+
+  name='';
+  getusername(){
+this.MyService.getuser(this.MyService.id).then(data=>{
+this.name=data.get("Username");
+})
+console.log(this.name)
   }
 }

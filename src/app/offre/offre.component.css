@@ -4,6 +4,14 @@
   --color: #3c3163;
   --transition-time: 0.5s;
 }
+.pad{
+  padding: 80px 0px 10px 0px;
+}
+
+.b1{
+  padding-left: 300px;
+  padding-top: 50px;
+}
 
 * {
   box-sizing: border-box;
@@ -59,8 +67,9 @@ a {
 
 .card h1 {
   margin: 0;
-  font-size: 1.5em;
+  font-size: 35px;
   line-height: 1.2em;
+  padding-top: 20px;
 }
 
 .card p {
@@ -68,10 +77,14 @@ a {
   font-family: 'Open Sans';
   margin-top: 0.5em;
   line-height: 2em;
+  display: none;
+  color: #3c3163;
+  
 }
 
 .card .tags {
   display: flex;
+  padding-top: 10px;
 }
 
 .card .tags .tag {
@@ -99,7 +112,7 @@ a {
   opacity: .8;
 }
 
-.card:before, .card:after {
+.card:before, .card:after  {
   content: '';
   transform: scale(0);
   transform-origin: top left;
@@ -112,16 +125,20 @@ a {
   transition-timing-function: ease-in-out;
 }
 
-.card:before {
+.card:before , .card p{
   background: #ddd;
   width: 250%;
   height: 250%;
+
+
 }
 
-.card:after {
+.card:after, .card p {
   background: white;
   width: 200%;
   height: 200%;
+
+
 }
 
 .card:hover {

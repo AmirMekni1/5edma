@@ -10,10 +10,12 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class DemandeComponent implements OnInit {
   ISuser: boolean = false;
-name:any;
+  name:any;
+  e:any;
 
-  constructor(private MyService: ServicesService, private router: Router,private spinner: NgxSpinnerService) {
-    this.MyService.user.subscribe(user => {
+  constructor(private myservice:ServicesService,private spinner: NgxSpinnerService){ 
+    this.e=this.myservice.id;
+    this.myservice.user.subscribe(user => {
       if (user) {
         this.ISuser = true
         this.name=user.displayName
@@ -22,9 +24,20 @@ name:any;
         console.log(this.ISuser)
       }
     })
-    
-  }ngOnInit(): void {
-  
+   }
+  ngOnInit(): void {
+   this.AllOffre()
+  }
+  public ArrayDemandeTous: any = [];
+  AllOffre() {
+    this.myservice.getOffres().subscribe(data => {
+      this.ArrayDemandeTous = data.map(e => {
+        const inf = e.payload.doc.data();
+        return inf;
+      })
+    }, err => {
+      return alert(window.alert(err))
+    })
   }
 
   loadingPage() {
@@ -39,6 +52,41 @@ name:any;
   }
 
   SignOut(){
-    this.MyService.Logout();
+    this.myservice.Logout();
+  }
+
+  DeleteOffre(p:any){
+    this.myservice.delete(p);
+  }
+
+  getIndice(i:any){
+    this.myservice.setCodeOffre(i)
+  }
+  ArrayDemande = {
+    Username:'',
+    Numero:'',
+    Email:'',
+    TitreOffre:'',
+    Description:'',
+    Image:'',
+    codeDemande:''
+  };
+  SetOffre() {
+    
+}
+  commander(i:any){
+    console.log(i)
+    this.myservice.getOffre(i).then(data => {
+      console.log(i)
+     this.ArrayDemande.Numero=data.get('Numero')
+     this.ArrayDemande.TitreOffre=data.get('Titre')
+     this.ArrayDemande.Image=data.get('Image')
+     this.ArrayDemande.Username=data.get('Username')
+     this.ArrayDemande.Description=data.get('Description')
+     this.ArrayDemande.Email=data.get("Email");
+     this.ArrayDemande.codeDemande=data.get("codeOffre")
+  })
+  console.log(this.ArrayDemande)
+    this.myservice.AddDemande(this.ArrayDemande);
   }
 }

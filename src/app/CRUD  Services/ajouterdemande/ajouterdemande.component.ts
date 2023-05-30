@@ -12,6 +12,7 @@ export class AjouterdemandeComponent implements OnInit{
   ISuser: boolean = false;
   name:any;
   em:any
+  myDate= Date.now();
     constructor(private MyService: ServicesService, private router: Router,private spinner:NgxSpinnerService) {
       this.MyService.user.subscribe(user => {
         if (user) {
@@ -43,6 +44,6 @@ export class AjouterdemandeComponent implements OnInit{
     }
     
     InsertOffre(form:{codeOffre:string,Username:string,Numero:number,Email: string,TitreOffre:string,Description:string,Image:string}){
-      this.MyService.AddOffre(form)
+      this.MyService.AddOffre(form,this.myDate)
     }
 }

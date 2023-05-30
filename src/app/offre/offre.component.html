@@ -73,23 +73,24 @@
     </div>
   </div>
   <div *ngIf="ISuser">
+    <div class="pad">
+    <div class="position-relative">
+    <div class="position-absolute top-50 start-50 translate-middle">
     <h1>Mes Offres</h1>
-    <button type="submit" value="Ajouter" class="btn btn-primary" routerLink="/Ajouter">Ajouter</button>
 
-
+    </div></div></div>
     <!------------------------------création d'une carte----------------------------------------------------------------------->
-
-
-   
+    <div class="b1">
+    <button type="button" value="Ajouter" class="btn btn-primary" routerLink="/Ajouter">Ajouter Une Offre</button>
+  </div>
     <section class="cards-wrapper">
       <div class="card-grid-space" *ngFor="let elm of ArrayOffres">
         <div class="num"></div>
-        <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/"
-          style="--bg-img: url({{elm.Image}})">
+        <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/" style="--bg-img: url({{elm.Image}})">
           <div>
             <h1>{{elm.Titre}}</h1>
             <p>{{elm.Description}}</p>
-            <div class="date">6 Oct 2017</div>
+            <div class="date ">{{elm.dateoffre | date}}</div>
             <div class="tags">
               <div class="tag">{{elm.Username}}</div>
             </div>
@@ -97,8 +98,4 @@
         </a>
       </div>
     </section>
-
-
-
-
   </div>
