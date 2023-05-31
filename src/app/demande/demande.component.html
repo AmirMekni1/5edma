@@ -36,10 +36,7 @@
               <a class="nav-link " routerLink="/" (click)="SignOut()">Déconnexion</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+         
         </div>
       </div>
     </nav>
@@ -73,14 +70,11 @@
     </div>
   </div>
   <div *ngIf="ISuser">
-    <h1>Mes Offres</h1>
-    <button type="submit" value="Ajouter" class="btn btn-primary" routerLink="/Ajouter">Ajouter</button>
-
-
+    <div class="padT"><h1>Les Commandes</h1></div>
     <!------------------------------création d'une carte------------------------------------------------------------------------>
     <section class="cards-wrapper">
       <div class="card-grid-space" *ngFor="let elm of ArrayDemandeTous">
-        <div class="num"></div>
+        <div class="num" (click)="commander(elm.codeOffre)"><i class="fa-solid fa-cart-shopping fa-2xs"> Co m m a n d e r</i></div>
         <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/" style="--bg-img: url({{elm.Image}})">
           <div>
             <h1>{{elm.Titre}}</h1>

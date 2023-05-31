@@ -3,20 +3,24 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand">5edma</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" routerLink="/PageDacueil">Home</a>
+              <a class="nav-link active" aria-current="page"
+                routerLink="/PageDacueil">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" routerLink="/Demande">Demande</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" routerLink="/Offre" role="button" data-bs-toggle="dropdown"
+              <a class="nav-link dropdown-toggle" routerLink="/Offre"
+                role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Offre
               </a>
@@ -33,20 +37,19 @@
               <a class="nav-link" routerLink="/Reglage">Reglage</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " routerLink="/" (click)="SignOut()">Déconnexio</a>
+              <a class="nav-link " routerLink="/" (click)="SignOut()">Déconnexion</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>
     <div class="inner-header flex">
-      <svg version="1.1" class="logo" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" xml:space="preserve">
-        <path fill="#FFFFFF" stroke="#000000" stroke-width="10" stroke-miterlimit="10" d="M57,283" />
+      <svg version="1.1" class="logo" baseProfile="tiny" id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 500 500" xml:space="preserve">
+        <path fill="#FFFFFF" stroke="#000000" stroke-width="10"
+          stroke-miterlimit="10" d="M57,283" />
         <g>
           <path fill="#fff"
             d="M250.4,0.8C112.7,0.8,1,112.4,1,250.2c0,137.7,111.7,249.4,249.4,249.4c137.7,0,249.4-111.7,249.4-249.4
@@ -57,91 +60,75 @@
       <h1>Welcome To 5edma {{name}}</h1>
     </div>
     <br>
-
-    <!--
-      <div class="">
-        <table class="uk-table uk-table-hover uk-table-divider">
-          <thead>
-            <th scope="col">Username</th>
-            <th scope="col">Numero</th>
-            <th scope="col">Email</th>
-            <th scope="col">Password</th>
-          </thead>
-          <tbody>
-            <tr *ngFor="let elm of ArrayStudent">
-              <td>{{elm.Username}}</td>
-              <td>{{elm.Numero}}</td>
-              <td>{{elm.Email}}</td>
-              <td>{{elm.Password}}</td>
-              <td><button type="button" class="btn btn-outline-success">UPDATE</button></td>
-              <td><button type="button" class="btn btn-light"><img
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAABnUlEQVR4nO3XO0vDUBgG4A+Hog5O/oYWXDtU9ISUWhAnJwcLYicr1IYiuLvYwamTY/+CS0UHHRx0cXJyEAVBqTp2MTlt8kp6weamxuQELPngXXI7DydfkhOiuMa5wCgNRmsuSUcLWaQVMPqARHCJBolWwx1wV56FIl+gIj9YUmYtlDIGShl8EwNl9uo4tyKfm9f1j1HkbShZhJ6dbMk/piJXhWAqctU3ZliQiHv0ht9wClqIMR6FeGb+68wYhRT0/XXXQc3t5v5IMEYhiU7rCVzToB9uWSEHm+CqCv72DGNjTjym22yAc96PqkKvFfuQWrEPGewzjxN/m3IJdC6Pv0Cahu5JwwLpXJ8AS5MRvfRyNtBIPCCC38C5BPjdjRVyf+sFEYvRh806OjMuTS0co9sh7y+/AYWP0W2QXo8szzia2gUkAFNXeoM5mtXW1PrRXkS3qa6gc9V0NusA5AIR/DTJE/C1PV5cSWK/2u0/LBfc0g6OYXQWEuY0OGaBUmD0GAhins8oGRhjFtI0DUZ5j3/rn5LHPE31LhTXONQnS44gc73xXvsAAAAASUVORK5CYII="></button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>  
-      -->
-
-
-
-    <div>
-      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+<div>
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
         viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
         <defs>
-          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          <path id="gentle-wave"
+            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
         </defs>
         <g class="parallax">
-          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+          <use xlink:href="#gentle-wave" x="48" y="0"
+            fill="rgba(255,255,255,0.7" />
+          <use xlink:href="#gentle-wave" x="48" y="3"
+            fill="rgba(255,255,255,0.5)" />
+          <use xlink:href="#gentle-wave" x="48" y="5"
+            fill="rgba(255,255,255,0.3)" />
           <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
         </g>
       </svg>
     </div>
   </div>
   <div *ngIf="ISuser">
+    <div class="padT"><h1>Cree Une Offre</h1></div>
     <div class="position-relative">
       <div class="position-absolute top-50 start-50 translate-middle">
-        <form action="#" class="sign-up-form" #offreA="ngForm" (ngSubmit)="InsertOffre(offreA.value)">
-          <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="codeOffre" class="form-control" name="codeOffre" #codeOffre="ngModel"
-              ngModel />
-          </div>
-          <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="Username" class="form-control" name="Username" #Username="ngModel"
-              ngModel />
-          </div>
-          <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="Numero de telephone" class="form-control" name="Numero" #Numero="ngModel"
-              ngModel />
-          </div>
-          <div class="input-field">
-            <i class="fas fa-envelope"></i>
-            <input type="email" placeholder="Email" name="Email" class="form-control" #Email="ngModel" ngModel />
-          </div>
+        <div class="pad">
+          <form action="#" class="sign-up-form" #offreA="ngForm"
+            (ngSubmit)="InsertOffre(offreA.value)">
+            <div class="input-field">
+              
+              <input type="text" placeholder="codeOffre" class="form-control"
+                name="codeOffre" #codeOffre="ngModel"
+                ngModel />
+            </div>
+            <div class="input-field">
+              <input type="text" disabled [(ngModel)]="name" class="form-control"
+                name="Username" #Username="ngModel"
+                ngModel />
+            </div>
+            <div class="input-field">
+              <input type="text" placeholder="Numero de telephone"
+                class="form-control" name="Numero" #Numero="ngModel"
+                ngModel />
+            </div>
+            <div class="input-field">
 
-          <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="TitreOffre" class="form-control" name="TitreOffre" #TitreOffre="ngModel"
-              ngModel />
-          </div>
+              <input type="text" disabled [(ngModel)]="em" name="Email"
+                class="form-control" #Email="ngModel" ngModel />
+            </div>
 
-          <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="Description" class="form-control" name="Description" #Description="ngModel"
-              ngModel />
-          </div>
+            <div class="input-field">
+              <input type="text" placeholder="TitreOffre" class="form-control"
+                name="TitreOffre" #TitreOffre="ngModel"
+                ngModel />
+            </div>
 
-          <div class="input-field">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="Image" class="form-control" name="Image" #Image="ngModel" ngModel />
+            <div class="input-field">
+              <input type="text" placeholder="Description" class="form-control"
+                name="Description" #Description="ngModel"
+                ngModel />
+            </div>
+            <div class="input-field">
+              <input type="text" placeholder="Image" class="form-control"
+                name="Image" #Image="ngModel" ngModel />
+            </div>
+            <div class="b1">
+            <input type="submit"  class="btn btn-primary" value="Ajouter" />
           </div>
-          <input type="submit" class="btn" value="Ajouter" routerLink="/Offre" />
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   </div>

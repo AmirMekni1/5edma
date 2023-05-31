@@ -36,10 +36,6 @@
               <a class="nav-link " routerLink="/" (click)="SignOut()">Déconnexion</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>
@@ -74,18 +70,27 @@
   </div>
   <div *ngIf="ISuser">
     <div class="pad">
-    <div class="position-relative">
-    <div class="position-absolute top-50 start-50 translate-middle">
-    <h1>Mes Offres</h1>
+      <div class="position-relative">
+        <div class="position-absolute top-50 start-50 translate-middle">
+          <h1>Mes Offres</h1>
 
-    </div></div></div>
+        </div>
+      </div>
+    </div>
     <!------------------------------création d'une carte----------------------------------------------------------------------->
     <div class="b1">
-    <button type="button" value="Ajouter" class="btn btn-primary" routerLink="/Ajouter">Ajouter Une Offre</button>
-  </div>
+      <button type="button" value="Ajouter" class="btn btn-primary" routerLink="/Ajouter">Ajouter Une Offre</button>
+    </div>
     <section class="cards-wrapper">
       <div class="card-grid-space" *ngFor="let elm of ArrayOffres">
-        <div class="num"></div>
+        <div class="num">
+          <div class="ico">
+          <i class="fa-solid fa-trash fa-2xs" (click)="DeleteOffre(elm.codeOffre)"></i>
+          <span class="ico2">
+          <i (click)="getIndice(elm.codeOffre)" class="fa-regular fa-pen-to-square fa-xs"></i> 
+          </span>
+        </div>
+      </div>
         <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/" style="--bg-img: url({{elm.Image}})">
           <div>
             <h1>{{elm.Titre}}</h1>

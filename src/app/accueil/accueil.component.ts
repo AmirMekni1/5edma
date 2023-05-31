@@ -53,10 +53,11 @@ export class AccueilComponent implements OnInit {
     this.MyService.id="";
   }
 
-  name='';
+  public name='';
   getusername(){
 this.MyService.getuser(this.MyService.id).then(data=>{
 this.name=data.get("Username");
+this.MyService.setUserName(this.name)
 })
 console.log(this.name)
   }

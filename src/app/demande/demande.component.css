@@ -17,7 +17,7 @@ body {
 }
 
 a {
-  color: inherit;
+
 }
 
 .cards-wrapper {
@@ -69,6 +69,7 @@ a {
   font-family: 'Open Sans';
   margin-top: 0.5em;
   line-height: 2em;
+  display: none;
   
 }
 
@@ -114,18 +115,18 @@ a {
   transition-timing-function: ease-in-out;
 }
 
-.card:before p {
+.card:before {
   background: #ddd;
   width: 250%;
   height: 250%;
-  display: none;
+
 }
 
-.card:after p {
+.card:after {
   background: white;
   width: 200%;
   height: 200%;
-  display: flex ;
+
 }
 
 .card:hover {
@@ -186,6 +187,11 @@ a {
   .card {
     max-width: calc(100vw - 4rem);
   }
+}
+
+.padT{
+  padding-left: 670px;
+  padding-top: 100px;
 }
 
 @media screen and (max-width: 450px) {

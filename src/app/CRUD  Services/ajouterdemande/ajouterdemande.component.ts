@@ -10,7 +10,7 @@ import { ServicesService } from 'src/app/services.service';
 })
 export class AjouterdemandeComponent implements OnInit{
   ISuser: boolean = false;
-  name:any;
+  name=this.MyService.getUserName;
   em:any
   myDate= Date.now();
     constructor(private MyService: ServicesService, private router: Router,private spinner:NgxSpinnerService) {
@@ -44,6 +44,6 @@ export class AjouterdemandeComponent implements OnInit{
     }
     
     InsertOffre(form:{codeOffre:string,Username:string,Numero:number,Email: string,TitreOffre:string,Description:string,Image:string}){
-      this.MyService.AddOffre(form,this.myDate)
+      this.MyService.AddOffre(form,this.myDate,this.MyService.id,this.name)
     }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicesService } from '../services.service';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-offre',
@@ -13,7 +14,7 @@ export class OffreComponent implements OnInit{
   name:any;
   e:any;
 
-  constructor(private myservice:ServicesService,private spinner: NgxSpinnerService){ 
+  constructor(private myservice:ServicesService,private spinner: NgxSpinnerService,private route:Router){ 
     this.e=this.myservice.id;
     this.myservice.user.subscribe(user => {
       if (user) {
@@ -61,6 +62,7 @@ export class OffreComponent implements OnInit{
 
   getIndice(i:any){
     this.myservice.setCodeOffre(i)
+    this.route.navigate(['/Modifier'])
   }
 
 }

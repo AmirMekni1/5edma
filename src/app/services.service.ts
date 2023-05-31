@@ -167,17 +167,17 @@ console.log(Profile.Username)
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-AddOffre(o:offre,x:number){
+AddOffre(o:offre,x:number,r:any,e:any){
   return this.dataS.collection('InfoOffre').doc(o.codeOffre).set({
     codeOffre: o.codeOffre,
-    Email: o.Email,
+    Email: r,
     Numero: o.Numero,
-    Username:o.Username,
+    Username:e,
     Description:o.Description,
     Titre:o.TitreOffre,
     Image:o.Image,
     dateoffre:x
-  }).then(() => {window.alert("Ajouté avec Succés") }).catch((erreur) => { window.alert(erreur) })
+  }).then(( ) => {this.router.navigate(["/Offre "]); window.alert("Ajouté avec Succés");  }).catch(erreur => { window.alert(erreur) })
 }
 
 UpdateOffre(o : any,x: any){
@@ -217,5 +217,13 @@ AddDemande(o:Demande){
     Titre:o.TitreOffre,
     Image:o.Image
   }).then(() => {window.alert("commandé avec Succés") }).catch((erreur) => { window.alert(erreur) })
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+name : any
+getUserName(){
+  return this.name
+}
+setUserName(n : any){
+  this.name=n
 }
 }
