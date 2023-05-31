@@ -14,7 +14,7 @@ input{
  text-align: center;
 }
 .b1{
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .padT{
@@ -50,8 +50,7 @@ p {
 }
 
 form{
-    width: 500px;
-    
+    width: 500px;   
 }
 .inner-header {
   height:75vh;

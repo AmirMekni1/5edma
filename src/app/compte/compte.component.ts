@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { ServicesService } from '../services.service';
+import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
-  selector: 'app-parametre',
-  templateUrl: './parametre.component.html',
-  styleUrls: ['./parametre.component.css']
+  selector: 'app-compte',
+  templateUrl: './compte.component.html',
+  styleUrls: ['./compte.component.css']
 })
-export class ParametreComponent implements OnInit {
+export class CompteComponent implements OnInit {
   //______________________________________________________________________________________________________
   ArrayClient = {
     Username:'',

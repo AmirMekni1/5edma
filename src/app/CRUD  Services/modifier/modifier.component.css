@@ -31,8 +31,26 @@ p {
   vertical-align: middle;
 }
 
+.padT{
+  padding-top: 690px;
+}
+
+.b1{
+  padding-top: 250px;
+  padding-bottom: 200px;
+}
+
+.pad{
+
+  padding-top: 100px;
+}
+
+input{
+  text-align: center;
+}
 form{
     width: 500px;
+    
     
 }
 .inner-header {

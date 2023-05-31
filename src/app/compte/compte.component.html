@@ -1,0 +1,108 @@
+<div *ngIf="ISuser">
+    <div class="header">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand">5edma</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page"
+                  routerLink="/PageDaccueil">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/Demande">Demande</a>
+              </li>
+  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" routerLink="/Offre"
+                  role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Offre
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/Reglage">Reglage</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " routerLink="/" (click)="SignOut()">Déconnexion</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="inner-header flex">
+        <h1>Welcome To 5edma {{name}}</h1> </div>
+      <br>
+      <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave"
+              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0"
+              fill="rgba(255,255,255,0.7" />
+            <use xlink:href="#gentle-wave" x="48" y="3"
+              fill="rgba(255,255,255,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="5"
+              fill="rgba(255,255,255,0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+          </g>
+        </svg>
+      </div>
+  
+    </div>
+  </div>
+  <div *ngIf="ISuser">
+    <div class="padT">
+      <span><h1>Réglage du profil</h1></span>
+    </div>
+    <div class="position-relative">
+      <div class="position-absolute top-100 start-50 translate-middle">
+        <div class="pad">
+          <form #Profile="ngForm" (ngSubmit)="UpdateProfile(Profile.value)">
+            <div class=" mb-3">
+              <input type="text" class="form-control" placeholder="Username"
+                [(ngModel)]="ArrayClient.Username" id="exampleInputEmail1"
+                name="Username" #Username="ngModel" ngModel>
+            </div>
+            <div class=" mb-3">
+              <input type="text" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp" placeholder="Phone number"
+                [(ngModel)]="ArrayClient.Numero" name="Numero" #Numero="ngModel"
+                ngModel>
+            </div>
+            <div class=" mb-3">
+              <input type="text" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp" placeholder="Email address" disabled
+                [(ngModel)]="ArrayClient.Email" name="Email" #Email="ngModel"
+                ngModel>
+            </div>
+            <div class="position-relative">
+              <div class="position-absolute top-100 start-50 translate-middle">
+                <div class="b1">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

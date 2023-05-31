@@ -187,7 +187,7 @@ UpdateOffre(o : any,x: any){
     Description:o.Description,
     Titre:o.TitreOffre,
     Image:o.Image
-  }).then(() => {window.alert("Modifié avec Succés") }).catch((erreur) =>{window.alert(erreur)})
+  }).then(() => {this.router.navigate(["/Demande"]); window.alert("Modifié avec Succés") }).catch((erreur) =>{window.alert(erreur)})
 }
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/

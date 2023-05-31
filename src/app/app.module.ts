@@ -39,6 +39,7 @@ import { OffreComponent } from './offre/offre.component';
 import { ParametreComponent } from './parametre/parametre.component';
 import { CommandeComponent } from './commande/commande.component';
 import { AjouterdemandeComponent } from './CRUD  Services/ajouterdemande/ajouterdemande.component';
+import { CompteComponent } from './compte/compte.component';
 
 //______________________Angular-Component________________Ngx-Spinner-End__________________________________________________
 
@@ -59,6 +60,7 @@ import { AjouterdemandeComponent } from './CRUD  Services/ajouterdemande/ajouter
     ParametreComponent,
     CommandeComponent,
     AjouterdemandeComponent,
+    CompteComponent,
   ],
   imports: [
     BrowserModule,
