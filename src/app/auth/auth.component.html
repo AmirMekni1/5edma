@@ -32,19 +32,20 @@
           <h2 class="title">Sign up</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Username" name="Username" #Username="ngModel" ngModel />
+            <input type="text" placeholder="Username" name="Username" #Username="ngModel" ngModel required />
           </div>
+          
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Numero de telephone" name="Numero" #Numero="ngModel" ngModel />
+            <input type="text" placeholder="Numero de telephone" name="Numero" #Numero="ngModel" ngModel required/>
           </div>
           <div class="input-field">
             <i class="fas fa-envelope"></i>
-            <input type="email" placeholder="Email" name="Email" #Email="ngModel" ngModel />
+            <input type="email" placeholder="Email" name="Email" #Email="ngModel" ngModel required/>
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Password" name="Password" #Password="ngModel" ngModel />
+            <input type="password" placeholder="Password" name="Password" #Password="ngModel" ngModel required />
           </div>
           <input type="submit" class="btn" value="Sign up" />
           <p class="social-text">Or Sign up with social platforms</p>

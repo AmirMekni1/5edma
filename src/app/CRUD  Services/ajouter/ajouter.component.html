@@ -91,41 +91,41 @@
               
               <input type="text" placeholder="codeOffre" class="form-control"
                 name="codeOffre" #codeOffre="ngModel"
-                ngModel />
+                ngModel required/>
             </div>
             <div class="input-field">
               <input type="text" disabled [(ngModel)]="name" class="form-control"
                 name="Username" #Username="ngModel"
-                ngModel />
+                ngModel required/>
             </div>
             <div class="input-field">
               <input type="text" placeholder="Numero de telephone"
                 class="form-control" name="Numero" #Numero="ngModel"
-                ngModel />
+                ngModel required />
             </div>
             <div class="input-field">
 
               <input type="text" disabled [(ngModel)]="em" name="Email"
-                class="form-control" #Email="ngModel" ngModel />
+                class="form-control" #Email="ngModel" ngModel required/>
             </div>
 
             <div class="input-field">
               <input type="text" placeholder="TitreOffre" class="form-control"
                 name="TitreOffre" #TitreOffre="ngModel"
-                ngModel />
+                ngModel required/>
             </div>
 
             <div class="input-field">
               <input type="text" placeholder="Description" class="form-control"
                 name="Description" #Description="ngModel"
-                ngModel />
+                ngModel required/>
             </div>
             <div class="input-field">
               <input type="text" placeholder="Image" class="form-control"
-                name="Image" #Image="ngModel" ngModel />
+                name="Image" #Image="ngModel" ngModel required/>
             </div>
             <div class="b1">
-            <input type="submit"  class="btn btn-primary" value="Ajouter" />
+            <input type="submit"  class="btn btn-primary" value="Ajouter"/>
           </div>
           </form>
         </div>

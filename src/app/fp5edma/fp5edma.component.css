@@ -25,8 +25,13 @@ body {
 .pad{
   padding-top: 670px;
 }
+textarea{
+    text-align: center;
+    padding-bottom: 50px;
+   
+}
 img{
-    
+    margin-top: 20px;
    margin-left: 180px;
     border-radius: 50%;
     width: 300px; /* Ajustez la largeur selon vos besoins */
