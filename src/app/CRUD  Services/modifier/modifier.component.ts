@@ -10,7 +10,7 @@ import { ServicesService } from 'src/app/services.service';
 })
 export class ModifierComponent implements OnInit {
   ISuser: boolean = false;
-name:any;
+name=this.MyService.getUserName();
 test:any
   constructor(private MyService: ServicesService, private router: Router,private spinner: NgxSpinnerService) {
     this.test=this.MyService.getCodeOffre()
@@ -27,7 +27,7 @@ test:any
   }ngOnInit(): void {
    this.test=this.MyService.getCodeOffre()
     this.SetOffre();
-  
+    this.MyService.getUserName() 
   }
 
   loadingPage() {

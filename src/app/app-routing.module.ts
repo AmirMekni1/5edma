@@ -12,7 +12,7 @@ import { CommandeComponent } from './commande/commande.component';
 
 const routes: Routes = [
   {path:"", component:AuthComponent},
-  {path:"test", component:FP5edmaComponent},
+  {path:"Info", component:FP5edmaComponent},
   {path:"PageDaccueil", component:AccueilComponent},
   {path:"Offre", component:OffreComponent},
   {path:"Demande", component:DemandeComponent},

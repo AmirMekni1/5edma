@@ -16,6 +16,7 @@ em:any
     this.MyService.user.subscribe(user => {
       if (user) {
         this.ISuser = true
+        
       } else {
         this.ISuser = false
         console.log(this.ISuser)

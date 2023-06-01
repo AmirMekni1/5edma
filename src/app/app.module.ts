@@ -6,6 +6,7 @@ import { AuthComponent } from './auth/auth.component';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 
+
 //____________________FireBase-Begin_____________________________________________________
 
 import { AngularFireModule } from '@angular/fire/compat';

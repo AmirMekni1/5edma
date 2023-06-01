@@ -104,3 +104,191 @@ p {
   }
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==============how work============== */
+#how-work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.7rem;
+  padding: 200px;
+}
+
+.wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 270px;
+  width: 250px;
+  border-bottom: 3px solid var(--matte-cyan);
+  color: var(--matte-white);
+  background-color: rgb(163, 226, 245);
+  padding: 1.5rem;
+  text-align: center;
+  gap: 1rem;
+}
+.work h3 {
+  color: var(--matte-cyan);
+}
+.work h4 {
+  font-size: 1.5rem;
+}
+
+/*animation*/
+@keyframes draw {
+  /*on reprend les valeurs definies precedement pour le svg*/
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    /*effet ultra-rapide
+    stroke-dashoffset: -1274;*/
+    stroke-width: 8px;
+  }
+  100% {
+    /*la longueur du tracé a la fin de l'animation, une valeur tres petite cree un effet de pointillés et donne un effet d'acceleration*/
+    /*ici la valeur de 760 correspond au perimetre du rectangle 320x60*/
+     stroke-dasharray: 760;
+    /*offset enleve une partie du contour*/
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+  }
+}
+.svg-wrapper:hover .rectShape {
+  /*vitesse et type d'animation pour les keyframes*/
+  animation: 0.5s draw linear forwards;
+}
+
+/* CERCLE */
+.svg-wrapper-bis {
+  height: 200px;
+  width: 320px;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+}
+.text-bis {
+  color: #fff;
+  font-family: 'Arial';
+  font-size: 11px;
+  letter-spacing: 8px;
+  line-height: 32px;
+  position: relative;
+  top: -130px;
+  left:-5px;
+}
+
+/*reglage du cercle SVG*/
+.circleShape {
+  fill: transparent;
+  stroke-width: 8px;
+  stroke: #e0480cd3;
+  stroke-dasharray: 100 90;
+  stroke-dashoffset: 0;
+}
+
+/*animation*/
+@keyframes drawBis {
+  0% {
+    stroke-dasharray: 100 90;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+     stroke-dasharray: 376;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+  }
+}
+.svg-wrapper-bis:hover .circleShape {
+  animation: 1.0s drawBis linear forwards;
+}
+
+img{
+  max-width: 80px;
+  max-height: 60px;
+}
+
+
+.gfd{
+color: black;
+
+}

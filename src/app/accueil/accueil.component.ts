@@ -21,23 +21,15 @@ export class AccueilComponent implements OnInit {
     console.log( this.signInCompte.getRedirectResult)
     this.MyService.user.subscribe(user => {
       if (user) {
-     
         this.ISuser = true
-        console.log(user)
-        
-        console.log(user.email)
-        console.log(this.MyService.nameAfficher);
       } else {
         this.ISuser = false
-        console.log(this.ISuser)
       }
     })
     
   } 
 
   ngOnInit(): void {this.getusername(); }
-
-
   loadingPage() {
 
     this.spinner.show();

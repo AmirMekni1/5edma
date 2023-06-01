@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class OffreComponent implements OnInit{
 
   ISuser: boolean = false;
-  name:any;
+  name=this.myservice.getUserName() 
   e:any;
 
   constructor(private myservice:ServicesService,private spinner: NgxSpinnerService,private route:Router){ 
@@ -19,15 +19,14 @@ export class OffreComponent implements OnInit{
     this.myservice.user.subscribe(user => {
       if (user) {
         this.ISuser = true
-        this.name=user.displayName
       } else {
         this.ISuser = false
-        console.log(this.ISuser)
       }
     })
    }
   ngOnInit(): void {
    this.AllOffre()
+   this.myservice.getUserName() 
   }
   public ArrayOffres: any = [];
   AllOffre() {
@@ -63,6 +62,10 @@ export class OffreComponent implements OnInit{
   getIndice(i:any){
     this.myservice.setCodeOffre(i)
     this.route.navigate(['/Modifier'])
+  }
+  getIndiceInfo(i:any){
+    this.myservice.setCodeOffre(i)
+    this.route.navigate(['/Info'])
   }
 
 }

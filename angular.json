@@ -29,9 +29,7 @@
               "node_modules/ngx-spinner/animations/square-jelly-box.css",
               "src/styles.css"
             ],
-            "scripts": [
-              "src/app/fp5edma/monscript.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {

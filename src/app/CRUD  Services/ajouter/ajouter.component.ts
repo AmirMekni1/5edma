@@ -10,7 +10,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class AjouterComponent implements OnInit {
   ISuser: boolean = false;
-name=this.MyService.getUserName() 
+  name=this.MyService.getUserName()  
 em:any
 dateOffre:any
   myDate= Date.now();
@@ -24,14 +24,12 @@ dateOffre:any
         console.log(this.ISuser)
       }
     })
-
     this.em =this.MyService.id
-   
   }
   
   
   ngOnInit(): void {
-  
+ this.MyService.getUserName() 
   }
 
   loadingPage() {

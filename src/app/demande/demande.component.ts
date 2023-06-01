@@ -10,15 +10,14 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class DemandeComponent implements OnInit {
   ISuser: boolean = false;
-  name:any;
+  name=this.myservice.getUserName() 
   e:any;
 
-  constructor(private myservice:ServicesService,private spinner: NgxSpinnerService){ 
+  constructor(private myservice:ServicesService,private spinner: NgxSpinnerService,private route : Router){ 
     this.e=this.myservice.id;
     this.myservice.user.subscribe(user => {
       if (user) {
         this.ISuser = true
-        this.name=user.displayName
       } else {
         this.ISuser = false
         console.log(this.ISuser)
@@ -27,6 +26,7 @@ export class DemandeComponent implements OnInit {
    }
   ngOnInit(): void {
    this.AllOffre()
+this.myservice.getUserName() 
   }
   public ArrayDemandeTous: any = [];
   AllOffre() {
@@ -88,5 +88,9 @@ export class DemandeComponent implements OnInit {
   })
   console.log(this.ArrayDemande)
     this.myservice.AddDemande(this.ArrayDemande);
+  }
+  getIndiceInfo(i:any){
+    this.myservice.setCodeOffre(i)
+    this.route.navigate(['/Info'])
   }
 }

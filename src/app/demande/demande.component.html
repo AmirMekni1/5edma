@@ -75,7 +75,7 @@
     <section class="cards-wrapper">
       <div class="card-grid-space" *ngFor="let elm of ArrayDemandeTous">
         <div class="num" (click)="commander(elm.codeOffre)"><i class="fa-solid fa-cart-shopping fa-2xs"> Co m m a n d e r</i></div>
-        <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/" style="--bg-img: url({{elm.Image}})">
+        <a class="card" (click)="getIndiceInfo(elm.codeOffre)" style="--bg-img: url({{elm.Image}})">
           <div>
             <h1>{{elm.Titre}}</h1>
             <p>{{elm.Description}}</p>
